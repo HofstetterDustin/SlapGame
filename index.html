@@ -1,22 +1,56 @@
 <html>
+
 <head>
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="game.css">
 	
 </head>
+
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12">
-				<img class="target" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0nkIieF7mylEF9jb8qykQQHNb82RTflXuIYGgIrnUVlZMiVv5" alt="" width="200px">
+	<div class="bkgd container-fluid">
+		<div class="head row">
+			<div class="col-sm-6">
+				<h2>
+					<span style="color:beige">Health Level: 
+						<span id="health">--</span>
+					</span>
+				</h2>
 			</div>
-			<div class="col-12">
-				<button type="button">Slap</button>
+			<div class="col-sm-6">
+				<h2>
+					<span style="color:beige">Landed Hits: 
+						<span id="hits">--</span>
+					</span>
+				</h2>
 			</div>
 		</div>
-	</div>
-	
-	<script src="game.js"></script>
+		<div class="boarder1 row"></div>
+		<div class="container-fluid">
+			<div class="ctr row">
+				<div class="tar col-sm-12 col-md-12">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0nkIieF7mylEF9jb8qykQQHNb82RTflXuIYGgIrnUVlZMiVv5" 
+					 alt="" width="200px">
+				</div>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+		<div class="class container-fluid">
+			<div class="btn row">
+				<div class="butt col-sm-4">
+					<button class="button" onclick="slap()">SLAP</button>
+				</div>
+				<div class="butt col-sm-4">
+					<button class="button" onclick="punch()">PUNCH</button>
+				</div>
+				<div class="butt col-sm-4">
+					<button class="button" onclick="kick()">KICK</button>
+				</div>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+		<script src="game.js"></script>
 </body>
+
 </html>
