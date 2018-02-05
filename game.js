@@ -2,7 +2,7 @@ var health = 100
 var hits = 0
 
 
-
+//attack functions ----------------------------------------------------------------------
 function slap(){
     //Lower health by 1, lower hits by 1
     health--
@@ -41,7 +41,7 @@ function kick(){
 
 
 update()
-
+//Template ----------------------------------------------------------------------------
 var attacksContainerElement = document.getElementById('attacks-container')
 function draw(attacks){
     var template = ''
@@ -67,7 +67,7 @@ function draw(attacks){
     }
     attacksContainerElem.InnerHTML = template
 }
-//draw(attacks)        
+//draw(attacks) -----------------------------------------------------------------------       
 
 var items = function(name, modifier, description){
     this.name = name;
@@ -91,7 +91,8 @@ var cylon = {
        items:[]
     }
 }
-
+//----------------------------------------------------------------------------------
+//2nd player//
 // var adamda = {
 //     health: 100,
 //     attacks: {
@@ -100,14 +101,22 @@ var cylon = {
 //         kick: 10,
 //     }
 // }
+//-----------------------------------------------------------------------------------
 
+
+//write a function that finds a item by its itemId  then increases the health by item.modifier.
 function addMods(item,itemId) {
+    //var totalMedPac = 0
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
         if(itemId == medPac.Id){
-            health += item.modifier
+            totalMedPac += item.modifier
         }
     }
+    return totalMedPack
+
 }
 
-//write a function that finds a item by its itemId increase the health by item.modifier.
+//what if I use the medPac to increase health?
+
+
