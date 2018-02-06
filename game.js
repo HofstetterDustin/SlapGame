@@ -2,6 +2,30 @@ var health = 100
 var hits = 0
 
 
+//-----------------------------------------------------------------------------------
+//1st player//
+var cylon = {
+    health: 100,
+    attacks: {
+        slap: 1,
+        punch: 5,
+        kick: 10,
+       medPac:[]
+    }
+}
+//----------------------------------------------------------------------------------
+//2nd player//
+// var adamda = {
+//     health: 100,
+//     attacks: {
+//         slap: 1,
+//         punch: 5,
+//         kick: 10,
+//     }
+// }
+//-----------------------------------------------------------------------------------
+
+
 //attack functions ----------------------------------------------------------------------
 function slap(){
     //Lower health by 1, lower hits by 1
@@ -69,54 +93,28 @@ function draw(attacks){
 }
 //draw(attacks) -----------------------------------------------------------------------       
 
-var items = function(name, modifier, description){
+var medPac = function(name, modifier, description){
     this.name = name;
     this.modifier = modifier;
     this.description = description;
 }
 
-var items={
-    sheild: new items("Sheild", 0.3, "This is an awesome Sheild!"),
-    blade:  new items("Rick Deckard", 2, "Do androids dream of electric sheep?"),
-    johnny5:    new items("S.A.I.N.T.", 4, "Strategic Artificially Intelligent Nuclear Transport"),
-
-}
-
-var cylon = {
-    health: 100,
-    attacks: {
-        slap: 1,
-        punch: 5,
-        kick: 10,
-       items:[]
-    }
-}
-//----------------------------------------------------------------------------------
-//2nd player//
-// var adamda = {
-//     health: 100,
-//     attacks: {
-//         slap: 1,
-//         punch: 5,
-//         kick: 10,
-//     }
-// }
-//-----------------------------------------------------------------------------------
-
-
-//write a function that finds a item by its itemId  then increases the health by item.modifier.
-function addMods(item,itemId) {
-    //var totalMedPac = 0
-    for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-        if(itemId == medPac.Id){
-            totalMedPac += item.modifier
-        }
-    }
-    return totalMedPack
+var medPacs = {
+    sheild: new medPac("Sheild", 3, "This is an awesome Sheild!"),
+    blade:  new medPac("Rick Deckard", 2, "Do androids dream of electric sheep?"),
+    johnny5: new medPac("S.A.I.N.T.", 4, "Strategic Artificially Intelligent Nuclear Transport"),
 
 }
 
 //what if I use the medPac to increase health?
+// var medPacContainerElement = document.getElementById('medPac-container')
+function addMedPac(medPacName){
+    var mod = medPacs[medPacName].modifier;
+    //current health + mod
+    console.log("Health ",health,"hits ",hits)
+//add mod to health
+//debugger
+}   
+update(health)
 
-
+//==>  My Brain Hurts, alot!  <==//
