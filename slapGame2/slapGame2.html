@@ -1,0 +1,75 @@
+<html>
+
+<head>
+	<title>Bieber Slap</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="apps/style.css">
+	
+</head>
+
+<body>
+	<div class="bkgd container-fluid">
+		<div class="head row">
+			<div class="col-sm-6">
+				<h2>
+					<span style="color:beige">Health Level: 
+						<span id="health">--</span>
+					</span>
+				</h2>
+			</div>
+			<div class="col-sm-6">
+				<h2>
+					<span style="color:beige">Landed Hits: 
+						<span id="hits">--</span>
+					</span>
+				</h2>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+		<div class="container-fluid">
+			<div class="ctr row">
+				<div class="tar col-sm-12 col-md-12" >
+					<img id="img" src="" max-width="400px">
+					 
+				</div>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+		<div class="attacks container-fluid">
+			<div class="btn row">
+				<div class="butt col-sm-4">
+					<button class="button1" onclick="app.controllers.basicController.attacks('slap')">SLAP</button>
+				</div>
+				<div class="butt col-sm-4">
+					<button class="button1" onclick="app.controllers.basicController.attacks('punch')">PUNCH</button>
+				</div>
+				<div class="butt col-sm-4">
+					<button class="button1" onclick="app.controllers.basicController.attacks('kick')">KICK</button>
+				</div>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+		<div class="medPac container-fluid">
+			<div class="btn row">
+				<div class="butt col-sm-3">
+					<button class="button2" onclick="app.controllers.basicController.giveItem('shield')">Comment</button>
+				</div>
+				<div class="butt col-sm-3">
+					<button class="button2" onclick="app.controllers.basicController.giveItem('edit')">Vogue</button>
+				</div>
+				<div class="butt col-sm-3">
+					<button class="button2" onclick="app.controllers.basicController.giveItem('home')">New Home</button>
+                </div>
+                <div class="butt col-sm-3">
+					<button class="button2" onclick="app.controllers.basicController.giveItem('nose')">Nose Job</button>
+				</div>
+			</div>
+		</div>
+		<div class="boarder1 row"></div>
+        <script src="apps/slap-service2.js"></script>
+        <script src="apps/slap-controller.js"></script>
+        <script src="apps/apps.js"></script>
+</body>
+
+</html>
